@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="650.0" prefWidth="1000.0" stylesheets="@MainScreenStyle.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View_Controller.AddProductScreenController">
+   <children>
+      <Label fx:id="addProductTitleLabel" layoutX="190.0" layoutY="69.0" text="Add Product" />
+      <VBox layoutX="500.0" layoutY="61.0" prefHeight="575.0" prefWidth="475.0" spacing="10.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="55.0" prefWidth="500.0">
+               <children>
+                  <Label fx:id="addProductSearchPartLabel" text="Search Part">
+                     <HBox.margin>
+                        <Insets right="150.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="addProductSearchPartTextField" />
+                  <Button fx:id="addProductSearchPartButton" mnemonicParsing="false" onAction="#AddProductSearchButtonPushed" text="Search">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <TableView fx:id="addProductAddTableView" prefHeight="200.0" prefWidth="200.0">
+              <columns>
+                  <TableColumn fx:id="addProductPartIDCol" prefWidth="104.0" text="Part ID" />
+                  <TableColumn fx:id="addProductPartNameCol" prefWidth="113.0" text="Part Name" />
+                  <TableColumn fx:id="addProductInvLevelCol" prefWidth="119.0" text="Inventory Level" />
+                  <TableColumn fx:id="addProductPriceCol" prefWidth="138.0" text="Price/Cost per Unit" />
+              </columns>
+            </TableView>
+            <HBox alignment="CENTER_RIGHT" prefHeight="55.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="addProductPartButton" alignment="CENTER_RIGHT" mnemonicParsing="false" onAction="#AddProductAddButtonPushed" text="Add" />
+               </children>
+            </HBox>
+            <Label fx:id="addProductAssociatedPartsLabel" text="Associated Parts">
+               <padding>
+                  <Insets right="100.0" />
+               </padding>
+            </Label>
+            <TableView fx:id="addProductCurrentTableView" prefHeight="200.0" prefWidth="200.0">
+              <columns>
+                <TableColumn fx:id="addProductCurrentPartIDCol" prefWidth="104.0" text="Part ID" />
+                <TableColumn fx:id="addProductCurrentPartNameCol" prefWidth="113.0" text="Part Name" />
+                  <TableColumn fx:id="addProductCurrentInvLevelCol" prefWidth="119.0" text="Inventory Level" />
+                  <TableColumn fx:id="addProductCurrentPriceCol" prefWidth="138.0" text="Price/Cost per Unit" />
+              </columns>
+            </TableView>
+            <HBox alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="deleteAssociatedPartButton" mnemonicParsing="false" onAction="#AddProductDeleteButtonPushed" text="Delete" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <Button fx:id="addProductSaveButton" mnemonicParsing="false" onAction="#AddProductSaveButtonPushed" text="Save" />
+                  <Button fx:id="addProductCancelButton" mnemonicParsing="false" onAction="#AddProductCancelButtonPushed" text="Cancel" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox alignment="TOP_CENTER" layoutX="28.0" layoutY="185.0" prefHeight="300.0" prefWidth="400.0" spacing="10.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="50.0" prefWidth="600.0" spacing="20.0">
+               <children>
+                  <Label fx:id="addProductProductIDLabel" text="Product ID">
+                     <padding>
+                        <Insets right="25.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="addProductIDTextField" disable="true" editable="false" promptText="Auto Gen - ID" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="50.0" prefWidth="600.0" spacing="20.0">
+               <children>
+                  <Label fx:id="addProductProductNameLabel" text="Product Name">
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="addProductNameTextField" promptText="Product Name" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="50.0" prefWidth="600.0" spacing="20.0">
+               <children>
+                  <Label fx:id="addProductInvLevelLabel" text="Inventory Level">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="addProductInvLevelTextField" promptText="Inventory Level" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="50.0" prefWidth="600.0" spacing="20.0">
+               <children>
+                  <Label fx:id="addProductPriceLabel" text="Price/Cost">
+                     <padding>
+                        <Insets right="30.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="addProductPriceTextField" promptText="Price/Cost per Unit" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="50.0" prefWidth="600.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="50.0" prefWidth="175.0" spacing="20.0">
+                     <children>
+                        <Label fx:id="addProductMinLabel" text="Min" />
+                        <TextField fx:id="addProductMinTextField" prefWidth="100.0" promptText="Minimum" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="50.0" prefWidth="175.0" spacing="20.0">
+                     <children>
+                        <Label fx:id="addProductMaxLabel" text="Max" />
+                        <TextField fx:id="addProductMaxTextField" prefWidth="100.0" promptText="Maximum" />
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

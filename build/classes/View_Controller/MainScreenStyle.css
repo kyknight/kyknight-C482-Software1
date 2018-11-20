@@ -1,0 +1,71 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Nov 10, 2018, 1:59:57 AM
+    Author     : kyleighknight
+*/
+
+*{
+    saveAndAddButtons:#19BF00;
+    searchButton: #0099FF;
+    deleteButton: #FF2600;
+    cancel-Modify-ExitButton: #E6E9F0;
+    backgroundColor: #A8A8A8;
+}
+
+.root{
+    -fx-background-color: backgroundColor;
+}
+
+#mainScreenLabel, #addPartLabel, #modifyPartLabel, #addProductTitleLabel, #modifyProductTitleLabel{
+    -fx-font: 30px "Arial";
+}
+
+#partsLabel, #productsLabel, #addPartIDLabel, #addPartNameLabel, #addPartInvLevelLabel,
+#addPartPriceLabel, #addPartMinLabel, #addPartMaxLabel, #addPartMachineCompanyLabel,
+#addPartInhouseRadioButton, #addPartOutsourcedRadioButton, #modifyPartIDLabel, 
+#modifyPartNameLabel, #modifyPartInvLevelLabel, #modifyPartPriceLabel, #modifyPartMinLabel,
+#modifyPartMaxLabel, #modifyPartMachineCompanyLabel, #modifyPartInhouseRadioButton,
+#modifyPartOutsourcedRadioButton, #addProductProductIDLabel, #addProductProductNameLabel,
+#addProductInvLevelLabel, #addProductPriceLabel, #addProductMinLabel, #addProductMaxLabel,
+#modifyProductProductIDLabel, #modifyProductProductNameLabel, #modifyProductInvLevelLabel,
+#modifyProductPriceLabel, #modifyProductMinLabel, #modifyProductMaxLabel{
+    -fx-font: 14px "Arial";
+}
+
+#addProductSearchPartLabel, #addProductAssociatedPartsLabel, #modifyProductSearchPartLabel,
+#modifyProductAssociatedPartsLabel{
+    -fx-font: 16px "Arial";
+}
+
+#addPartButton, #addProductButton, #addPartSaveButton, #modifyPartUpdateButton,
+#addProductPartButton, #addProductSaveButton, #modifyProductAddButton,
+#modifyProductSaveButton{
+    -fx-background-color: saveAndAddButtons;
+    -fx-font: 14px "Arial";
+}
+
+#partsSearchButton, #productSearchButton, #addProductSearchPartButton, #modifyProductSearchPartButton{
+    -fx-background-color: searchButton;
+    -fx-font: 14px "Arial Narrow";
+}
+
+#modifyPartButton, #modifyProductButton, #partsClearSearchFieldButton, 
+#productClearSearchFieldButton, #exitButton, #addPartCancelButton,
+#modifyPartCancelButton, #addProductCancelButton, #modifyProductCancelButton{
+    -fx-background-color: cancel-Modify-ExitButton;
+    -fx-font: 14px "Arial";
+}
+
+#deletePartButton, #deleteProductButton, #deleteAssociatedPartButton, #ModifyProductDeleteAssociatedPartButton{
+    -fx-background-color: deleteButton;
+    -fx-font: 14px "Arial";
+}
+
+#partsPane, #productPane{
+    -fx-border-color: #E6E9F0;
+    -fx-border-radius: 5px;
+}

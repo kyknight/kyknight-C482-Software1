@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" stylesheets="@MainScreenStyle.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View_Controller.ModifyPartsController">
+   <children>
+      <VBox alignment="TOP_CENTER" prefHeight="575.0" prefWidth="600.0" spacing="10.0">
+         <children>
+            <Label fx:id="modifyPartLabel" alignment="CENTER" contentDisplay="CENTER" text="Modify Part">
+               <padding>
+                  <Insets bottom="20.0" top="20.0" />
+               </padding>
+            </Label>
+            <HBox alignment="CENTER" prefHeight="22.0" prefWidth="600.0" spacing="20.0">
+               <children>
+                  <RadioButton fx:id="modifyPartInhouseRadioButton" mnemonicParsing="false" onAction="#modifyPartInHouseRadio" text="In-House" />
+                  <RadioButton fx:id="modifyPartOutsourcedRadioButton" mnemonicParsing="false" onAction="#modifyPartOutsourcedRadio" text="OutSourced" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="50.0" prefWidth="600.0" spacing="20.0">
+               <children>
+                  <Label fx:id="modifyPartIDLabel" text="Part ID">
+                     <padding>
+                        <Insets right="50.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="modifyPartIDTextField" disable="true" editable="false" promptText="Auto Gen - ID" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="50.0" prefWidth="600.0" spacing="20.0">
+               <children>
+                  <Label fx:id="modifyPartNameLabel" text="Part Name">
+                     <padding>
+                        <Insets right="30.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="modifyPartNameTextField" promptText="Part Name" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="50.0" prefWidth="600.0" spacing="20.0">
+               <children>
+                  <Label fx:id="modifyPartInvLevelLabel" text="Inventory Level">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="modifyPartInvTextField" promptText="Inventory Level" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="50.0" prefWidth="600.0" spacing="20.0">
+               <children>
+                  <Label fx:id="modifyPartPriceLabel" text="Price/Cost">
+                     <padding>
+                        <Insets right="30.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="modifyPartPriceTextField" promptText="Price/Cost per Unit" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="50.0" prefWidth="600.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="50.0" prefWidth="175.0" spacing="20.0">
+                     <children>
+                        <Label fx:id="modifyPartMinLabel" text="Min" />
+                        <TextField fx:id="modifyPartMinTextField" prefWidth="100.0" promptText="Minimum" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="50.0" prefWidth="175.0" spacing="20.0">
+                     <children>
+                        <Label fx:id="modifyPartMaxLabel" text="Max" />
+                        <TextField fx:id="modifyPartMaxTextField" prefWidth="100.0" promptText="Maximum" />
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="50.0" prefWidth="600.0" spacing="20.0">
+               <children>
+                  <AnchorPane prefHeight="200.0" prefWidth="325.0">
+                     <children>
+                        <Label fx:id="modifyPartMachineCompanyLabel" layoutX="21.0" layoutY="17.0" text="Label" />
+                        <TextField fx:id="modifyPartMachineCompanyTextField" layoutX="137.0" layoutY="12.0" promptText="Label" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+            <HBox alignment="BOTTOM_CENTER" prefHeight="75.0" prefWidth="600.0" spacing="20.0">
+               <children>
+                  <Button fx:id="modifyPartUpdateButton" mnemonicParsing="false" onAction="#modifyPartUpdateButtonPushed" text="Update" />
+                  <Button fx:id="modifyPartCancelButton" mnemonicParsing="false" onAction="#modifyPartCancelButtonPushed" text="Cancel" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

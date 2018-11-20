@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="650.0" prefWidth="1000.0" stylesheets="@MainScreenStyle.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View_Controller.ModifyProductController">
+   <children>
+      <Label fx:id="modifyProductTitleLabel" layoutX="185.0" layoutY="69.0" text="Modify Product" />
+      <VBox layoutX="500.0" layoutY="61.0" prefHeight="575.0" prefWidth="475.0" spacing="10.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="55.0" prefWidth="500.0">
+               <children>
+                  <Label fx:id="modifyProductSearchPartLabel" text="Search Part">
+                     <HBox.margin>
+                        <Insets right="150.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="modifyProductSearchPartTextField" />
+                  <Button fx:id="modifyProductSearchPartButton" mnemonicParsing="false" onAction="#modifyProductSearchButtonPushed" text="Search">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <TableView fx:id="modifyProductAddTableView" prefHeight="200.0" prefWidth="200.0">
+               <columns>
+                  <TableColumn fx:id="modifyProductPartIDCol" prefWidth="104.0" text="Part ID" />
+                  <TableColumn fx:id="modifyProductPartNameCol" prefWidth="113.0" text="Part Name" />
+                  <TableColumn fx:id="modifyProductInvLevelCol" prefWidth="119.0" text="Inventory Level" />
+                  <TableColumn fx:id="modifyProductPriceCol" prefWidth="138.0" text="Price/Cost per Unit" />
+               </columns>
+            </TableView>
+            <HBox alignment="CENTER_RIGHT" prefHeight="55.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="modifyProductAddButton" alignment="CENTER_RIGHT" mnemonicParsing="false" onAction="#ModifyProductAddButtonPushed" text="Add" />
+               </children>
+            </HBox>
+            <Label fx:id="modifyProductAssociatedPartsLabel" text="Associated Parts">
+               <padding>
+                  <Insets right="100.0" />
+               </padding>
+            </Label>
+            <TableView fx:id="modifyProductCurrentTableView" prefHeight="200.0" prefWidth="200.0">
+               <columns>
+                  <TableColumn fx:id="modifyProductCurrentPartIDCol" prefWidth="104.0" text="Part ID" />
+                  <TableColumn fx:id="modifyProductCurrentPartNameCol" prefWidth="113.0" text="Part Name" />
+                  <TableColumn fx:id="modifyProductCurrentInvLevelCol" prefWidth="119.0" text="Inventory Level" />
+                  <TableColumn fx:id="modifyProductCurrentPriceCol" prefWidth="138.0" text="Price/Cost per Unit" />
+               </columns>
+            </TableView>
+            <HBox alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="ModifyProductDeleteAssociatedPartButton" mnemonicParsing="false" onAction="#ModifyProductDeleteButtonPushed" text="Delete" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <Button fx:id="modifyProductSaveButton" mnemonicParsing="false" onAction="#ModifyProductSaveButtonPushed" text="Update" />
+                  <Button fx:id="modifyProductCancelButton" mnemonicParsing="false" onAction="#ModifyProductCancelButtonPushed" text="Cancel" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox alignment="TOP_CENTER" layoutX="30.0" layoutY="182.0" prefHeight="300.0" prefWidth="400.0" spacing="10.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="50.0" prefWidth="600.0" spacing="20.0">
+               <children>
+                  <Label fx:id="modifyProductProductIDLabel" text="Product ID">
+                     <padding>
+                        <Insets right="25.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="modifyProductIDTextField" disable="true" editable="false" promptText="Auto Gen - ID" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="50.0" prefWidth="600.0" spacing="20.0">
+               <children>
+                  <Label fx:id="modifyProductProductNameLabel" text="Product Name">
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="modifyProductNameTextField" promptText="Product Name" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="50.0" prefWidth="600.0" spacing="20.0">
+               <children>
+                  <Label fx:id="modifyProductInvLevelLabel" text="Inventory Level">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets right="-5.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="modifyProductInvLevelTextField" promptText="Inventory Level" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="50.0" prefWidth="600.0" spacing="20.0">
+               <children>
+                  <Label fx:id="modifyProductPriceLabel" text="Price/Cost">
+                     <padding>
+                        <Insets right="30.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="modifyProductPriceTextField" promptText="Price/Cost per Unit" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="50.0" prefWidth="600.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="50.0" prefWidth="175.0" spacing="20.0">
+                     <children>
+                        <Label fx:id="modifyProductMinLabel" text="Min" />
+                        <TextField fx:id="modifyProductMinTextField" prefWidth="100.0" promptText="Minimum" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="50.0" prefWidth="175.0" spacing="20.0">
+                     <children>
+                        <Label fx:id="modifyProductMaxLabel" text="Max" />
+                        <TextField fx:id="modifyProductMaxTextField" prefWidth="100.0" promptText="Maximum" />
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
